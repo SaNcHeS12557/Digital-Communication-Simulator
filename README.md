@@ -20,7 +20,6 @@ This project is a C++ simulation of a complete digital communication system. It 
 - **C++17**
 - **Eigen:** For linear algebra operations
 - **matplotlib-cpp:** A C++ wrapper for Python's Matplotlib, used for plotting and visualization during development
-- **CMake:** Recommended for building the project
 
 ## Configuration
 
