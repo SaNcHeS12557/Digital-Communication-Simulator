@@ -1,44 +1,34 @@
-# 📡 PixLink Project
+# Digital Communication System Simulator in C++
 
-## 🚀 About the Project
-PixLink is an advanced synchronization tool between **Windows** and **Android** devices, enabling seamless connectivity and data sharing. This project aims to provide users with a powerful bridge between their devices for enhanced productivity!
+This project is a C++ simulation of a complete digital communication system. It is designed to model and analyze the process of transmitting digital data over a noisy channel, implementing key stages such as error correction coding, modulation, demodulation, and decoding. The primary goal is to evaluate the system's performance by calculating the Bit Error Rate (BER) under various noise conditions.
 
-## ✨ Features
-- 🔋 **Phone Battery Monitoring** – Keep track of your phone’s battery status directly from your PC
-- 🔵 **Bluetooth & Hotspot Control** – Remotely enable or disable Bluetooth and Wi-Fi hotspot
-- 📩 **Read Incoming Messages** – Receive and display SMS messages on your computer
-- 📤 **File Transfer** – Send and receive files effortlessly between Windows and Android
-- 🌐 **Screen Mirroring via URL** – Open a webpage on your PC and instantly display it on your phone’s screen
+## Key Features
 
-## 📦 Installation
-### For Android
-1. Download the PixLink APK (Coming soon!)
-2. Install and grant necessary permissions
-3. Connect your device via the Windows companion app
+- **Error Correction Coding:** Implements **Hamming(7,4)** code for forward error correction (FEC), capable of correcting single-bit errors.
+- **Digital Modulation Schemes:** Includes three fundamental modulation techniques:
+  - Amplitude-Shift Keying (ASK)
+  - Phase-Shift Keying (PSK)
+  - Frequency-Shift Keying (FSK)
+- **Noisy Channel Simulation:** Models a communication channel with two types of noise:
+  - Additive White Gaussian Noise (AWGN)
+  - Multiplicative (fading-like) noise
+- **Coherent Demodulation:** Performs demodulation by integrating the received signal with a reference carrier wave
+- **Performance Analysis:** Calculates the **Bit Error Rate (BER)** by comparing the transmitted and received bitstreams to quantify the system's reliability
 
-### For Windows
-1. Download the PixLink Windows client (Coming soon!)
-2. Install and launch the application
-3. Pair with your Android device
+![[Pasted image 20250622040818.png]]
+![[Pasted image 20250622040857.png]]
+![[Pasted image 20250622040911.png]]
+## Technologies & Libraries
 
-## 🔧 Technologies Used
-- **Android:** Java/Kotlin, Jetpack Libraries, Foreground Service
-- **Windows:** Java Desktop API
-- **Networking:** WebSocket, OkHttp
-- **UI/UX:** JavaFX UI
+- **C++17**
+- **Eigen:** For linear algebra operations
+- **matplotlib-cpp:** A C++ wrapper for Python's Matplotlib, used for plotting and visualization during development
 
-## 🛠️ Setup & Usage
-1. **Ensure both devices are connected to the same network** (Wi-Fi or Bluetooth tethering)
-2. **Launch the app on both devices** and establish a connection
-3. **Start using PixLink** for file transfer, notifications, and remote control features
+## Configuration
 
-## 🚧 Roadmap
-- [ ] Add support for clipboard synchronization
-- [ ] Enable remote Android screen mirroring
-- [ ] (Coming soon!)
-
-## 📜 License
-This project is licensed under the **GNU Public License**.
-
----
-Made with ❤️ by the rubicpp
+The main simulation parameters can be configured directly in the `main()` function:
+- `in_bits`: The input bit string to be transmitted.
+- `alfa`: Controls the intensity of the additive noise.
+- `beta`: Controls the intensity of the multiplicative noise.
+- `config`: Sets the order in which noise is applied (1 or 2).
+- You can also switch between `ASK`, `PSK`, and `FSK` modulation within the `transSystem` function
