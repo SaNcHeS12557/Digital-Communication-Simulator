@@ -15,9 +15,11 @@ This project is a C++ simulation of a complete digital communication system. It 
 - **Coherent Demodulation:** Performs demodulation by integrating the received signal with a reference carrier wave
 - **Performance Analysis:** Calculates the **Bit Error Rate (BER)** by comparing the transmitted and received bitstreams to quantify the system's reliability
 
-![[Pasted image 20250622040818.png]]
-![[Pasted image 20250622040857.png]]
-![[Pasted image 20250622040911.png]]
+![Pasted image 20250622040818](https://github.com/user-attachments/assets/41bb1660-05bc-4b36-9ab1-2fe300cf0bab)
+![Pasted image 20250622040857](https://github.com/user-attachments/assets/5551f720-d5b4-44a2-baac-b5bb44be7d49)
+![Pasted image 20250622040911](https://github.com/user-attachments/assets/68e3b81f-3910-44a4-b9d6-cd4399ede49e)
+
+
 ## Technologies & Libraries
 
 - **C++17**
